@@ -7,6 +7,6 @@
     "sha256": "^0.2.0"
   },
   "scripts": {
-    "browserify": "browserify ./index_src.js > ./index.js --s src"
+    "browserify": "browserify ./public/index_src.js > ./public/index.js --s src"
   }
 }
