@@ -1,0 +1,12 @@
+{
+  "name": "vanity",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "sha256": "^0.2.0"
+  },
+  "scripts": {
+    "browserify": "browserify ./index_src.js > ./index.js --s src"
+  }
+}
