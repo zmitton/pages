@@ -55,14 +55,14 @@
   </style>
 </head>
 <body>
-  <!-- <input id="targetString" placeholder="Target String"></input> -->
-  <div id="entropy-input-div"><textarea id="entropy-input" onkeyup="src.render()" placeholder="Entropy bits (1s and 0s) go here" rows="3"></textArea></div>
   <h2>Truly Random Seed Phrase Generator</h2>
-  <div><p id="entropy-length">Length 0</p></div>
+  <div id="entropy-input-div"><textarea id="entropy-input" onkeyup="src.render()" placeholder="Entropy bits (1s and 0s) go here" rows="7"></textArea></div>
+  <div><button onclick="src.render()" id="entropy-length">Length 0</button></div>
+  <!-- <div><button onclick="src.render()">Render</button></div> -->
   <div><p id="phrase-output">Seed phrase will appear here</p></div>
   <div>
     <h3>Directions</h3>
-    <p id="directions">The purpose of this App is to generate a standard seed phrase using <b> true and verifiable randomness</b>. Currently most hardware wallets generate the randomness for you. Using this app you can create <b>real</b> randomness and then input it into the hardware device.</p>
+    <p id="directions">The purpose of this App is to generate a standard seed phrase using <b> true and verifiable randomness</b>. Currently most hardware wallets generate the randomness for you. Using this app you can create <b>real</b> randomness by flipping a coin, map it to a seed phrase, and then input it into the hardware device.</p>
     <p>You will be flipping a coin(s) for the randomness. As you do, the 1s (heads) and 0s (tails) will be directly mappable to your seed words using a this <!-- todo link chart -->chart. For instance, the bitString '00101101001' produces the word 'coffee' todo https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt#L362 . So why use any software at all? Unfortunately the specification for Bip39 has a checksum appended to the end that requires sha256 to compute. This was a design mistake in my opinion, a simple error-correcting checksum would have sufficed and then you could have done this whole process on a paper worksheet.</p>
     <p>This process is recommended due to it being verifiable. You input your bit string to the textbox and once your words are displayed, use the paper chart (todo link) to make sure all your words match. The last few bits will not make a full word, and the checksum that gets generated determines the last few bits for the final word.</p>
     <p>This software is online! thats a problem. When creating a cold wallet, you do not want to input the entropy to a Internet-connected computer. My advise is to buy an old iphone or ipod touch from a pawn shop, navigate to the page, then turn off the wifi (all of the calculations are done client side). Complete the process, and then destroy the device.  </p>
