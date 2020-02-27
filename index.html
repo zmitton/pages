@@ -8,6 +8,8 @@
       width: device-width ;
       zoom: 1.0 ;
     }
+    body { font-size: 16px; }
+    input, select, textarea { font-size: 100%; }
 
     #entropy-input {
       width: 100%; /* force to expand to container's width */ 
@@ -16,7 +18,7 @@
 </head>
 <body>
   <!-- <input id="targetString" placeholder="Target String"></input> -->
-  <div id="entropy-input-div"><textarea id="entropy-input" placeholder="entropy bits" rows="10"></textArea></div>
+  <div id="entropy-input-div"><textarea id="entropy-input" placeholder="entropy bits go here" rows="10"></textArea></div>
   <div><button onclick="src.renderWords()">Calculate Phrase</button></div>
   <div><p id="phrase-output">PHRASE GOES HERE</p></div>
 </body>
